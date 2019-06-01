@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.mapper.UserMapper">
+    <!--实现根据传入的值是否为空实现insert语句拼接-->
+    <insert id="insert">
+        insert into user(name,email,phoneNumber,birthday
+        <if test="password != null and password != ''">
+            ,password
+        </if>
+        )
+        value(#{name},#{email},#{phoneNumber},#{birthday}
+        <if test="password != null and password != ''">
+            ,#{password}
+        </if>
+        )
+    </insert>
+
+
+
+    <!--注意语句中使用了 uid = #{uid} 来避免语句出现错误-->
+    <update id="update"  parameterType="cn.itcast.domain.User">
+        update user set
+        <if test="name != null and name != ''">
+            name = #{name},
+        </if>
+        <if test="email != null and email != ''">
+            email = #{email},
+        </if>
+            uid = #{uid} where uid = #{uid}
+    </update>
+
+    <update id="update2">
+        update user
+        <set>
+        <if test="name != null and name != ''">
+            name = #{name},
+        </if>
+        <if test="email != null and email != ''">
+            email = #{email},
+        </if>
+            uid = #{uid}
+        </set>
+            where uid = #{uid}
+    </update>
+    
+    
+    
+    <select id="findByCondition" resultType="cn.itcast.domain.User" parameterType="cn.itcast.domain.User">
+        select * from user where 1=1
+        <if test="name != null and name != ''">       
+            and name like concat('%',#{name},'%')
+        </if>     
+        <if test="email != null and email != ''">       
+            and email = #{email}
+        </if>
+    </select>
+
+    <select id="find4" resultType="cn.itcast.domain.User" parameterType="ArrayList">
+        SELECT * FROM USER WHERE uid in
+        <foreach collection="collection" open="(" close=")" separator="," item="item">
+            #{item}
+        </foreach>
+    </select>
+    
+
+</mapper>

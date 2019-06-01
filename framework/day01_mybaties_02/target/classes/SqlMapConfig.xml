@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置mybatis的环境-->
+    <environments default="mysql">
+        <!-- 配置mysql的环境-->
+        <environment id="mysql">
+            <!--配置事务的类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置是否使用连接池，以及使用哪种连接池
+               使用：POOLED
+               不使用：UNPOOLED
+               以上都是使用mybatis内置的
+               非Mybatis内置的：JDNI（放到第三天讲连接池时讲）
+            -->
+            <dataSource type="POOLED">
+                <!--配置连接数据库的四个要素-->
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybaties"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="root"></property>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入映射文件-->
+    <mappers>
+        <mapper resource="cn/itcast/UserMapper.xml" />
+    </mappers>
+</configuration>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day01_mybaties" />
+        <module name="day01_mybaties_02" />
+        <module name="day02_mybaties_02 (1)" />
+        <module name="day02_mybaties_02 (2)" />
+        <module name="day02_mybatis" />
+        <module name="day04_spring_beans" />
+        <module name="day04_spring_DI" />
+        <module name="day04_spring_factory" />
+        <module name="day04_spring_spring" />
+        <module name="day05_spring_01annotion_ioc" />
+        <module name="day05_spring_03account_annotation" />
+        <module name="day05_spring_04account_annotation" />
+        <module name="day05_spring_spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="account_annotation" target="1.5" />
+      <module name="day01_mybaties" target="1.7" />
+      <module name="day01_mybaties_02" target="1.7" />
+      <module name="day02_mybatis" target="1.7" />
+      <module name="day04_spring_beans" target="1.5" />
+      <module name="day04_spring_DI" target="1.5" />
+      <module name="day04_spring_factory" target="1.5" />
+      <module name="day04_spring_spring" target="1.5" />
+      <module name="day05_spring_01annotion_ioc" target="1.5" />
+      <module name="day05_spring_03account_annotation" target="1.5" />
+      <module name="day05_spring_04account_annotation" target="1.5" />
+      <module name="day05_spring_account_tx" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 配置对象：把对象的创建交给spring来管理
+
+    Spring中bean对象的细节
+        1.创建Bean对象的三种方式
+            第一种：使用全限定类名反射创建的方式              用的最多的方式
+                    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"></bean>
+            第二种：使用对象的静态方法来创建
+                配置静态方法创建 factory-method用于指定静态方法名称。class属性指定提供静态方法的全限定类名
+                <bean id="staticUserService" class="com.itheima.factory.StaticFactory" factory-method="getUserService"></bean>
+             第三种：使对象的非静态方法来创建
+                 配置非静态方法创建对象
+                    第一步：先把非静态工厂对象配置出来
+                    第二步：使用factory-bean来引用工厂对象的bean的id。factory-method指定创建的方法
+                    <bean id="instanceFactory" class="com.itheima.factory.InstanceFactory"></bean>
+                    <bean id="instanceUserService" factory-bean="instanceFactory" factory-method="getUserService"></bean>
+        2.Bean对象的作用范围改变
+             bean对象的作用范围改变
+            bean对象的作用范围包含：
+                   singleton        单例的 默认值
+                   prototype        多例的
+                   request          作用范围在请求域（请求范围）
+                   session          作用范围在会话域（一次会话）
+                   global-session   作用范围在全局会话（在非集群环境下，它就是session）
+             配置的属性，是bean标签的scope属性。
+              <bean id="userService" class="com.itheima.service.impl.UserServiceImpl" scope="prototype" ></bean>
+        3.Bean对象的生命周期
+            单例对象：
+                出生：容器创建时，对象就跟着创建好了
+                活着：容器在，对象就一直可用（活着的状态）
+                死亡：容器销毁，对象就消亡了
+
+                和容器的生命周期相同。
+
+
+            多例对象：
+                出生：每次对象使用时，都会创建新的
+                活着：对象在使用过程中一直活着
+                死亡：当对象长时间不用时，由垃圾回收器回收。
+    -->
+
+
+    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl" scope="prototype" init-method="init" destroy-method="destroy"></bean>
+</beans>

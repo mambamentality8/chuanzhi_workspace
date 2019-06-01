@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="day01_mybaties:war exploded">
+    <output-path>$PROJECT_DIR$/day01_mybaties/target/day01_mybaties</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="day01_mybaties" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
+          <element id="library" level="project" name="Maven: log4j:log4j:4.12" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/day01_mybaties/target/day01_mybaties/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="day01_mybaties/web/Web" />
+    </root>
+  </artifact>
+</component>
