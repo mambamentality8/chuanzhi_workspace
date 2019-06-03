@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置service-->
+    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl"></bean>
+
+    <!-- Spring中基于XML的AOP配置步骤-->
+
+    <!-- 第一步：把通知类交给spring来管理-->
+    <bean id="logger" class="com.itheima.utils.Logger"></bean>
+
+    <!-- 第二步：配置切面，使用的是aop:config表示开始配置-->
+    <aop:config>
+        <!-- 使用aop:aspect开始配置切面 id属性是用于指定切面的id  ref用于指定通知的id。 -->
+        <aop:aspect id="logAdvice" ref="logger">
+            <!--配置通知的类型:前置通知使用的是aop:before -->
+            <!--第三步：使用切入点表达式，指定对哪些方法增强
+                是配置pointcut属性。
+                属性的取值是切入点表达式。
+                切入点表达式是基于aspectJ语言的，也叫aspectJ表达式。需要用到aspectJweaver的坐标
+                表达式写法：
+                    关键字:execution(表达式)
+                    表达式：
+                        访问修饰符  返回值   包名.包名.包名.类名.方法名(参数列表)
+                    全匹配方式：
+                        public void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                    访问修饰符可以省略：
+                    返回值可以使用*，表示任意返回值
+                    包名可以使用*，表示任意包，但是有几级包需要写几个*
+                    包名可以使用..表示当前包及其子包
+                    类型和方法名都可以使用*，表示任意类和任意方法
+                    参数列表，可以使用具体类型。
+                        基本类型使用类型名称，引用类型是包名.类名
+                    参数列表的类型，可以使用*，表示任意参数类型，但是必须有参数
+                    参数列表可以使用..，表示有无参数均可，有参数可以是任意类型
+                    全通配方式：
+                        * *..*.*(..)
+
+                     实际开发中，我们基本都是对业务层增强，所以写法一般是：
+                        * com.itheima.service.impl.*.*(..)
+            -->
+            <aop:before method="printLog"  pointcut="execution(* com.itheima.service.impl.*.*(..))"></aop:before>
+        </aop:aspect>
+    </aop:config>
+</beans>

@@ -19,21 +19,29 @@
         <module name="day05_spring_03account_annotation" />
         <module name="day05_spring_04account_annotation" />
         <module name="day05_spring_spring" />
+        <module name="day06_spring_01accouont_tx" />
+        <module name="day06_spring_02proxy" />
+        <module name="day06_spring_03aop" />
+        <module name="day06_spring_04adviceType" />
+        <module name="day06_spring_05annotation_aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="account_annotation" target="1.5" />
-      <module name="day01_mybaties" target="1.7" />
-      <module name="day01_mybaties_02" target="1.7" />
-      <module name="day02_mybatis" target="1.7" />
-      <module name="day04_spring_beans" target="1.5" />
-      <module name="day04_spring_DI" target="1.5" />
-      <module name="day04_spring_factory" target="1.5" />
-      <module name="day04_spring_spring" target="1.5" />
-      <module name="day05_spring_01annotion_ioc" target="1.5" />
-      <module name="day05_spring_03account_annotation" target="1.5" />
-      <module name="day05_spring_04account_annotation" target="1.5" />
-      <module name="day05_spring_account_tx" target="1.8" />
+      <module name="day01_mybaties" target="1.8" />
+      <module name="day01_mybaties_02" target="1.8" />
+      <module name="day02_mybatis" target="1.8" />
+      <module name="day04_spring_beans" target="1.8" />
+      <module name="day04_spring_DI" target="1.8" />
+      <module name="day04_spring_factory" target="1.8" />
+      <module name="day04_spring_spring" target="1.8" />
+      <module name="day05_spring_01annotion_ioc" target="1.8" />
+      <module name="day05_spring_03account_annotation" target="1.8" />
+      <module name="day05_spring_04account_annotation" target="1.8" />
+      <module name="day06_spring_01accouont_tx" target="1.8" />
+      <module name="day06_spring_02proxy" target="1.8" />
+      <module name="day06_spring_03aop" target="1.8" />
+      <module name="day06_spring_04adviceType" target="1.8" />
+      <module name="day06_spring_05annotation_aop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

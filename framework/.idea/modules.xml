@@ -12,6 +12,11 @@
       <module fileurl="file://$PROJECT_DIR$/day05_spring_01annotion_ioc/day05_spring_01annotion_ioc.iml" filepath="$PROJECT_DIR$/day05_spring_01annotion_ioc/day05_spring_01annotion_ioc.iml" />
       <module fileurl="file://$PROJECT_DIR$/day05_spring_03account_annotation/day05_spring_03account_annotation.iml" filepath="$PROJECT_DIR$/day05_spring_03account_annotation/day05_spring_03account_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/day05_spring_04account_annotation/day05_spring_04account_annotation.iml" filepath="$PROJECT_DIR$/day05_spring_04account_annotation/day05_spring_04account_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_spring_01accouont_tx/day06_spring_01accouont_tx.iml" filepath="$PROJECT_DIR$/day06_spring_01accouont_tx/day06_spring_01accouont_tx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_spring_02proxy/day06_spring_02proxy.iml" filepath="$PROJECT_DIR$/day06_spring_02proxy/day06_spring_02proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_spring_03aop/day06_spring_03aop.iml" filepath="$PROJECT_DIR$/day06_spring_03aop/day06_spring_03aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_spring_04adviceType/day06_spring_04adviceType.iml" filepath="$PROJECT_DIR$/day06_spring_04adviceType/day06_spring_04adviceType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_spring_05annotation_aop/day06_spring_05annotation_aop.iml" filepath="$PROJECT_DIR$/day06_spring_05annotation_aop/day06_spring_05annotation_aop.iml" />
     </modules>
   </component>
 </project>

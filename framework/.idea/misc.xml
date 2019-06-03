@@ -20,6 +20,11 @@
         <option value="$PROJECT_DIR$/account_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/day05_spring_03account_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/day05_spring_04account_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/day06_spring_01accouont_tx/pom.xml" />
+        <option value="$PROJECT_DIR$/day06_spring_03aop/pom.xml" />
+        <option value="$PROJECT_DIR$/day06_spring_02proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/day06_spring_04adviceType/pom.xml" />
+        <option value="$PROJECT_DIR$/day06_spring_05annotation_aop/pom.xml" />
       </list>
     </option>
   </component>
