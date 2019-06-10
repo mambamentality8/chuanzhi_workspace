@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.IAccountDao">
+    <!-- 查询所有账户 -->
+    <select id="findAllAccount" resultType="com.itheima.domain.Account">
+        select * from account
+    </select>
+    <!-- 新增账户 -->
+    <insert id="saveAccount" parameterType="com.itheima.domain.Account">
+       insert into account(name,money) values(#{name},#{money});
+    </insert>
+</mapper>

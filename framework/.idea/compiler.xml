@@ -24,24 +24,53 @@
         <module name="day06_spring_03aop" />
         <module name="day06_spring_04adviceType" />
         <module name="day06_spring_05annotation_aop" />
+        <module name="day07_spring_01jdbctemplate" />
+        <module name="day07_spring_02account_aoptx" />
+        <module name="day07_spring_03account_aoptx_anno" />
+        <module name="day07_spring_04account_aoptx_anno_withoutxml" />
+        <module name="day07_spring_05Tx" />
+        <module name="day07_spring_06Tx" />
+        <module name="day07_spring_07Tx" />
+        <module name="day07_spring_08Tx" />
+        <module name="day08_spring_07Tx" />
+        <module name="day08_springmvc_01" />
+        <module name="day09_springmvc_01" />
+        <module name="day10_springmvc_01" />
+        <module name="day10_springmvc_02" />
+        <module name="day10_springmvc_03" />
+        <module name="ssmtest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="day01_mybaties" target="1.8" />
-      <module name="day01_mybaties_02" target="1.8" />
-      <module name="day02_mybatis" target="1.8" />
-      <module name="day04_spring_beans" target="1.8" />
-      <module name="day04_spring_DI" target="1.8" />
-      <module name="day04_spring_factory" target="1.8" />
-      <module name="day04_spring_spring" target="1.8" />
-      <module name="day05_spring_01annotion_ioc" target="1.8" />
-      <module name="day05_spring_03account_annotation" target="1.8" />
-      <module name="day05_spring_04account_annotation" target="1.8" />
-      <module name="day06_spring_01accouont_tx" target="1.8" />
-      <module name="day06_spring_02proxy" target="1.8" />
-      <module name="day06_spring_03aop" target="1.8" />
-      <module name="day06_spring_04adviceType" target="1.8" />
-      <module name="day06_spring_05annotation_aop" target="1.8" />
+      <module name="day01_mybaties" target="1.7" />
+      <module name="day01_mybaties_02" target="1.7" />
+      <module name="day02_mybatis" target="1.7" />
+      <module name="day04_spring_beans" target="1.5" />
+      <module name="day04_spring_DI" target="1.5" />
+      <module name="day04_spring_factory" target="1.5" />
+      <module name="day04_spring_spring" target="1.5" />
+      <module name="day05_spring_01annotion_ioc" target="1.5" />
+      <module name="day05_spring_03account_annotation" target="1.5" />
+      <module name="day05_spring_04account_annotation" target="1.5" />
+      <module name="day06_spring_01accouont_tx" target="1.5" />
+      <module name="day06_spring_02proxy" target="1.5" />
+      <module name="day06_spring_03aop" target="1.5" />
+      <module name="day06_spring_04adviceType" target="1.5" />
+      <module name="day06_spring_05annotation_aop" target="1.5" />
+      <module name="day07_spring_01jdbctemplate" target="1.5" />
+      <module name="day07_spring_02account_aoptx" target="1.5" />
+      <module name="day07_spring_03account_aoptx_anno" target="1.5" />
+      <module name="day07_spring_04account_aoptx_anno_withoutxml" target="1.5" />
+      <module name="day07_spring_05Tx" target="1.5" />
+      <module name="day07_spring_06Tx" target="1.5" />
+      <module name="day07_spring_07Tx" target="1.5" />
+      <module name="day07_spring_08Tx" target="1.5" />
+      <module name="day08_springmvc_01" target="1.7" />
+      <module name="day09_springmvc_01" target="1.7" />
+      <module name="day10_springmvc_01" target="1.7" />
+      <module name="day10_springmvc_02" target="1.7" />
+      <module name="day10_springmvc_03" target="1.7" />
+      <module name="ssmtest" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

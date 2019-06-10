@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!-- 配置service-->
+    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>
+
+    <!-- 配置accountDao -->
+    <bean id="accountDao" class="com.itheima.dao.impl.AccountDaoImpl">
+        <property name="runner" ref="runner"></property>
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+
+    <!-- 配置QueryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner"></bean>
+
+    <!-- 配置dataSource -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+    <!-- ConnectionUtils-->
+    <bean id="connectionUtils" class="com.itheima.utils.ConnectionUtils">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--基于AOP的事务控制  begin-->
+
+    <!-- 事务管理器：TransactionManager-->
+    <bean id="transactionManager" class="com.itheima.utils.TransactionManager">
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+
+    <!-- 配置aop-->
+    <aop:config>
+        <!-- 配置切入点表达式-->
+        <aop:pointcut id="pt1" expression="execution(* com.itheima.service.impl.*.*(..))"></aop:pointcut>
+        <!-- 配置切面 -->
+        <aop:aspect id="txAdvice" ref="transactionManager">
+            <!-- 配置通知的类型-->
+            <!--<aop:before method="beginTransaction" pointcut-ref="pt1"></aop:before>-->
+            <aop:after-returning method="commit" pointcut-ref="pt1"></aop:after-returning>
+            <aop:after-throwing method="rollback" pointcut-ref="pt1"></aop:after-throwing>
+            <!--<aop:after method="close" pointcut-ref="pt1"></aop:after>-->
+        </aop:aspect>
+    </aop:config>
+
+
+    <!--基于AOP的事务控制  end-->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 指定properties配置文件的位置-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+</beans>

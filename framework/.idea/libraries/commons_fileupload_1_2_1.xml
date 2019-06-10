@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="commons-fileupload-1.2.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/gnujaxp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/iText-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/jcommon-1.0.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/jfreechart-1.0.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/jfreechart-1.0.14-experimental.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/jfreechart-1.0.14-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/json_simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/junit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/sqljdbc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/swtgraphics2d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zhuyuran/web/WEB-INF/lib/upload.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
