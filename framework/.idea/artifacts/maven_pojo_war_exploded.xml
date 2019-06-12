@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="maven_pojo:war exploded">
+    <output-path>$PROJECT_DIR$/maven_pojo/target/maven_pojo</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="maven_pojo" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/maven_pojo/target/maven_pojo/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="maven_pojo/web/Web" />
+    </root>
+  </artifact>
+</component>

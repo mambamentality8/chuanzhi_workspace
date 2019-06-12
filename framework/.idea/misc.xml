@@ -10,6 +10,9 @@
     <file type="web" url="file://$PROJECT_DIR$/day10_springmvc_02" />
     <file type="web" url="file://$PROJECT_DIR$/day10_springmvc_03" />
     <file type="web" url="file://$PROJECT_DIR$/day11_ssmtest" />
+    <file type="web" url="file://$PROJECT_DIR$/maven_dao" />
+    <file type="web" url="file://$PROJECT_DIR$/maven_parent" />
+    <file type="web" url="file://$PROJECT_DIR$/maven_pojo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -46,7 +49,14 @@
         <option value="$PROJECT_DIR$/day10_springmvc_02/pom.xml" />
         <option value="$PROJECT_DIR$/day10_springmvc_03/pom.xml" />
         <option value="$PROJECT_DIR$/ssmtest/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_parent/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/maven_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_pojo/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">

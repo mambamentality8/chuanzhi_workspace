@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="maven_dao:war exploded">
+    <output-path>$PROJECT_DIR$/maven_dao/target/maven_dao</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="maven_dao" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/maven_dao/target/maven_dao/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="maven_dao/web/Web" />
+    </root>
+  </artifact>
+</component>

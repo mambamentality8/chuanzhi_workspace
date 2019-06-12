@@ -70,6 +70,9 @@
       <module name="day10_springmvc_01" target="1.7" />
       <module name="day10_springmvc_02" target="1.7" />
       <module name="day10_springmvc_03" target="1.7" />
+      <module name="maven_dao" target="1.7" />
+      <module name="maven_parent" target="1.8" />
+      <module name="maven_pojo" target="1.7" />
       <module name="ssmtest" target="1.7" />
     </bytecodeTargetLevel>
   </component>

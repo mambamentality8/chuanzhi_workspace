@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>maven_parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>maven_dao</module>
+        <module>maven_service</module>
+        <module>maven_web</module>
+        <module>maven_pojo</module>
+        <module>../maven_pojo</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>maven_parent Maven Webapp</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring.version>5.0.5.RELEASE</spring.version>
+               
+        <springmvc.version>5.0.5.RELEASE</springmvc.version>
+           
+        <mybatis.version>3.4.5</mybatis.version>
+    </properties>
+
+     <!--锁定jar版本-->    
+    <dependencyManagement>
+    <dependencies>
+    <!-- Mybatis -->            
+    <dependency>               
+        <groupId>org.mybatis</groupId>
+                       
+        <artifactId>mybatis</artifactId>
+                       
+        <version>${mybatis.version}</version>
+                   
+    </dependency>
+               
+    <!-- springMVC -->            
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-webmvc</artifactId>
+                       
+        <version>${springmvc.version}</version>
+                   
+    </dependency>
+               
+    <!-- spring -->            
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-context</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+               
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-core</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+               
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-aop</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+               
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-web</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+               
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-expression</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+               
+    <dependency>   
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-aspects</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+
+     
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-context-support</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-test</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-jdbc</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+
+     
+    <dependency>               
+        <groupId>org.springframework</groupId>
+                       
+        <artifactId>spring-tx</artifactId>
+                       
+        <version>${spring.version}</version>
+                   
+    </dependency>
+
+    </dependencies>
+
+    </dependencyManagement>
+
+    <build>
+        <finalName>maven_parent</finalName>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
